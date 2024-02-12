@@ -37,3 +37,10 @@ spec:
     importPolicy: {}
     referencePolicy:
       type: Local
+  - name: 0.3.2-24
+    from:
+      kind: DockerImage
+      name: quay.io/wolfgangntnx/iot-anomaly-detection:0.3.2-24
+    importPolicy: {}
+    referencePolicy:
+      type: Local
