@@ -9,13 +9,6 @@ spec:
   lookupPolicy:
     local: false
   tags:
-  - name: 0.3.2-22
-    from:
-      kind: DockerImage
-      name: quay.io/wolfgangntnx/iot-anomaly-detection:0.3.2-22
-    importPolicy: {}
-    referencePolicy:
-      type: Local
   - name: 0.3.2-23
     from:
       kind: DockerImage
@@ -41,6 +34,13 @@ spec:
     from:
       kind: DockerImage
       name: quay.io/wolfgangntnx/iot-anomaly-detection:0.3.2-26
+    importPolicy: {}
+    referencePolicy:
+      type: Local
+  - name: 0.3.2-27
+    from:
+      kind: DockerImage
+      name: quay.io/wolfgangntnx/iot-anomaly-detection:0.3.2-27
     importPolicy: {}
     referencePolicy:
       type: Local
