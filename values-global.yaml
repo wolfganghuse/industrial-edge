@@ -10,24 +10,25 @@ global:
     installPlanApproval: Automatic
 
   imageregistry:
-    account: PLAINTEXT
+    account: wolfgangntnx
     hostname: quay.io
     type: quay
 
   git:
     hostname: github.com
-    account: PLAINTEXT
+    account: wolfganghuse
     #username: PLAINTEXT
-    email: SOMEWHERE@EXAMPLE.COM
+    email: wolfgang.huse@nutanix.com
     dev_revision: main
 
   s3:
     bucket:
-      name: BUCKETNAME
-      region: AWSREGION
+      name: industrial-edge-1
+      region: us-east-1
       message:
         aggregation:
           count: 50
       custom:
         endpoint:
-          enabled: false
+          enabled: true
+          url: objects.blaze.dachlab.net
