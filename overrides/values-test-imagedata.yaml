@@ -2,6 +2,7 @@
 # prod_version and test_version keys with built values will be edited when the pipelines run
 ---
 iot_anomaly_detection:
-  tag: 0.3.2-32
+  tag: 0.3.2-33
   built_tags:
     - 0.3.2-32
+    - 0.3.2-33
