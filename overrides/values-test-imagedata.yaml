@@ -5,3 +5,7 @@ iot_anomaly_detection:
   tag: 0.3.2-41
   built_tags:
     - 0.3.2-41
+iot_consumer:
+  tag: 0.3.2-59
+  built_tags:
+    - 0.3.2-59
