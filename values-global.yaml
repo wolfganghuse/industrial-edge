@@ -31,4 +31,4 @@ global:
       custom:
         endpoint:
           enabled: true
-          url: objects.blaze.dachlab.net
+          url: https://objects.blaze.dachlab.net
