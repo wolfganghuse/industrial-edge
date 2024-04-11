@@ -22,6 +22,7 @@ iot_consumer:
     - 0.3.2-65
     - 0.3.2-66
 machine_sensor:
-  tag: 0.3.1-35
+  tag: 0.3.1-36
   built_tags:
     - 0.3.1-35
+    - 0.3.1-36
