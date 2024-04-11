@@ -7,14 +7,15 @@ clusterGroup:
   - external-secrets
   - open-cluster-management
   - manuela-ml-workspace
+  - opendatahub
   - manuela-tst-all
   - manuela-ci
   - manuela-data-lake
   - staging
   - vault
 
-    #  operatorgroupExcludes:
-    #  - manuela-ml-workspace
+  operatorgroupExcludes:
+  - manuela-ml-workspace
 
   subscriptions:
     acm:
@@ -71,7 +72,7 @@ clusterGroup:
 
     odh:
       name: odh
-      namespace: manuela-ml-workspace
+      namespace: opendatahub
       project: datacenter
       path: charts/datacenter/opendatahub
 

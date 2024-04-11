@@ -3,9 +3,9 @@ kind: DSCInitialization
 metadata:
   name: datacenter-dsci
 spec:
-  applicationsNamespace: manuela-ml-workspace
+  applicationsNamespace: opendatahub
   monitoring:
-    namespace: manuela-ml-workspace
+    namespace: opendatahub
     managementState: Managed
   serviceMesh:
     managementState: Removed
