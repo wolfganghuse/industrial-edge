@@ -70,10 +70,10 @@ clusterGroup:
         - /spec/loggingCA
 
     odh:
-    name: odh
-    namespace: manuela-ml-workspace
-    project: datacenter
-    path: charts/datacenter/opendatahub
+      name: odh
+      namespace: manuela-ml-workspace
+      project: datacenter
+      path: charts/datacenter/opendatahub
 
     pipelines:
       name: pipelines
