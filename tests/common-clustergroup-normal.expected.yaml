@@ -277,11 +277,14 @@ data:
           custom:
             endpoint:
               enabled: false
+              url: https://my.custom.endpoint
           message:
             aggregation:
               count: 50
           name: BUCKETNAME
           region: AWSREGION
+      secretStore:
+        backend: vault
       targetRevision: main
     main:
       clusterGroupName: datacenter
