@@ -1,3 +1,27 @@
 # NOTE: This file will be edited by the pipeline processes as new versions are built through the pipelines
 # prod_version and test_version keys with built values will be edited when the pipelines run
 ---
+iot_frontend:
+  tag: 0.3.1-4
+  built_tags:
+    - 0.3.1-2
+    - 0.3.1-3
+    - 0.3.1-4
+machine_sensor:
+  tag: 0.3.1-3
+  built_tags:
+    - 0.3.1-1
+    - 0.3.1-2
+    - 0.3.1-3
+iot_consumer:
+  tag: 0.3.2-3
+  built_tags:
+    - 0.3.2-2
+    - 0.3.2-2
+    - 0.3.2-3
+    - 0.3.2-3
+iot_anomaly_detection:
+  tag: 0.3.2-3
+  built_tags:
+    - 0.3.2-2
+    - 0.3.2-3
