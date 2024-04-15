@@ -14,12 +14,12 @@ machine_sensor:
     - 0.3.1-2
     - 0.3.1-3
 iot_consumer:
-  tag: 0.3.2-3
+  tag: 0.3.2-4
   built_tags:
     - 0.3.2-2
-    - 0.3.2-2
     - 0.3.2-3
     - 0.3.2-3
+    - 0.3.2-4
 iot_anomaly_detection:
   tag: 0.3.2-3
   built_tags:
