@@ -10,9 +10,10 @@ machine_sensor:
   built_tags:
     - 0.3.1-1
 iot_consumer:
-  tag: 0.3.2-1
+  tag: 0.3.2-2
   built_tags:
     - 0.3.2-1
+    - 0.3.2-2
 iot_anomaly_detection:
   tag: 0.3.2-2
   built_tags:
