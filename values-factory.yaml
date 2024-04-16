@@ -33,6 +33,7 @@ clusterGroup:
   projects:
   - factory
   - eso
+  - golang-external-secrets
 
   applications:
   - name: golang-external-secrets
@@ -45,6 +46,11 @@ clusterGroup:
     extraValueFiles:
       - /overrides/values-prod-imagedata.yaml
 
+    secrets:
+      name: external-secrets
+      namespace: external-secrets
+      project: golang-external-secrets
+      path: charts/factory/external-secrets
 #
 #  To have apps in multiple flavors, use namespaces and use helm overrides as appropriate
 #
