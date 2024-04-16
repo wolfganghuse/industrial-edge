@@ -1,0 +1,12 @@
+apiVersion: crd.nutanix.com/v1alpha1
+kind: NutanixCsiStorage
+metadata:
+  name: nutanixcsistorage
+  namespace: openshift-cluster-csi-drivers
+spec:
+  volumeClass: true
+  volumeClassName: "nutanix-volume"
+  volumeClassRetention: "Delete"
+  defaultStorageClass: volume
+  createSecret: false
+  storageContainer: {{ .Values.storagecontainer }}

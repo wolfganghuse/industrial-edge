@@ -35,12 +35,14 @@ clusterGroup:
   - factory
   - eso
   - golang-external-secrets
+  - nutanix
 
   applications:
   - name: golang-external-secrets
     namespace: golang-external-secrets
     project: eso
     path: common/golang-external-secrets
+
   - name: stormshift
     project: factory
     path: charts/factory/manuela-stormshift
@@ -51,6 +53,11 @@ clusterGroup:
     namespace: external-secrets
     project: golang-external-secrets
     path: charts/factory/external-secrets
+
+  - name: nutanix-csi
+    namespace: openshift-cluster-csi-drivers
+    project: nutanix
+    path: common/nutanix-csi
 #
 #  To have apps in multiple flavors, use namespaces and use helm overrides as appropriate
 #
