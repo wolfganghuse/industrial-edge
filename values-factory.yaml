@@ -32,6 +32,7 @@ clusterGroup:
 
   projects:
   - factory
+  - eso
 
   applications:
   - name: golang-external-secrets
