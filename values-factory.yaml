@@ -7,6 +7,7 @@ clusterGroup:
   - manuela-stormshift-machine-sensor
   - manuela-stormshift-messaging
   - openshift-cluster-csi-drivers
+  - golang-external-secrets
 
   subscriptions:
   - name: nutanixcsioperator
@@ -33,6 +34,10 @@ clusterGroup:
   - factory
 
   applications:
+  - name: golang-external-secrets
+    namespace: golang-external-secrets
+    project: eso
+    path: common/golang-external-secrets
   - name: stormshift
     project: factory
     path: charts/factory/manuela-stormshift
