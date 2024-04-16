@@ -58,6 +58,11 @@ clusterGroup:
     namespace: openshift-cluster-csi-drivers
     project: nutanix
     path: common/nutanix-csi
+
+  - name: image-registry
+    namespace: openshift-cluster-csi-drivers
+    project: nutanix
+    path: common/image-registry
 #
 #  To have apps in multiple flavors, use namespaces and use helm overrides as appropriate
 #
