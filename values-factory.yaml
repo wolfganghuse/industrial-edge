@@ -8,6 +8,7 @@ clusterGroup:
   - manuela-stormshift-messaging
   - openshift-cluster-csi-drivers
   - golang-external-secrets
+  - external-secrets
 
   subscriptions:
   - name: nutanixcsioperator
