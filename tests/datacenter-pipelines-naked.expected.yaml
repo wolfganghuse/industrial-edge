@@ -1398,7 +1398,7 @@ spec:
     - name: PATH_CONTEXT
       value: components/iot-frontend
     - name: BUILDER_IMAGE
-      value: nodeshift/ubi8-s2i-web-app
+      value: quay.io/hybridcloudpatterns/ubi8-s2i-web-app
     - name: CHAINED_BUILD_DOCKERFILE
       value: "FROM quay.io/hybridcloudpatterns/httpd-ionic\nCOPY --from=0 /opt/app-root/output /var/www/html/"
     - name: TAG
@@ -2340,7 +2340,7 @@ spec:
     - name: PATH_CONTEXT
       value: components/iot-frontend
     - name: BUILDER_IMAGE
-      value: nodeshift/ubi8-s2i-web-app
+      value: quay.io/hybridcloudpatterns/ubi8-s2i-web-app
     - name: CHAINED_BUILD_DOCKERFILE
       value: "FROM quay.io/hybridcloudpatterns/httpd-ionic\nCOPY --from=0 /opt/app-root/output /var/www/html/"
     - name: TAG
@@ -3519,7 +3519,7 @@ spec:
     default: "ops"
   steps:
   - name: update-tag
-    image: mikefarah/yq:latest
+    image: quay.io/hybridcloudpatterns/yq:latest
     script: |
       set -x
       TAG_VALUE=$(params.TAG)
@@ -3531,7 +3531,7 @@ spec:
       mv $VALUES_PATH.tmp $VALUES_PATH
     workingDir: $(workspaces.gitrepos.path)/$(params.subdirectory)
   - name: update-built-tags
-    image: mikefarah/yq:latest
+    image: quay.io/hybridcloudpatterns/yq:latest
     script: |
       set -x
       TAG_VALUE=$(params.TAG)
@@ -3543,7 +3543,7 @@ spec:
       mv $VALUES_PATH.tmp $VALUES_PATH
     workingDir: $(workspaces.gitrepos.path)/$(params.subdirectory)
   - name: prune-built-tags
-    image: mikefarah/yq:latest
+    image: quay.io/hybridcloudpatterns/yq:latest
     script: |
       set -x
       VALUES_PATH="$(cat $(workspaces.config.path)/$(params.CONFIGMAP_PREFIX)_$(params.ENVIRONMENT)_VALUES_PATH)"
@@ -4052,7 +4052,7 @@ objects:
               storage: 128Mi
     params:
     - name: S2I_BUILDER_IMAGE
-      value: nodeshift/ubi8-s2i-web-app
+      value: quay.io/hybridcloudpatterns/ubi8-s2i-web-app
     - name: LOCAL_IMAGE
       value: image-registry.openshift-image-registry.svc:5000/manuela-tst-all/line-dashboard
     - name: PATH_CONTEXT

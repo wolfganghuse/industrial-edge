@@ -6,8 +6,17 @@ clusterGroup:
   - manuela-stormshift-line-dashboard
   - manuela-stormshift-machine-sensor
   - manuela-stormshift-messaging
+  - openshift-cluster-csi-drivers
+  - golang-external-secrets
+  - external-secrets
 
   subscriptions:
+  - name: nutanixcsioperator
+    namespace: openshift-cluster-csi-drivers
+    channel: stable
+    source: certified-operators
+    sourceNamespace: openshift-marketplace
+
   - name: seldon-operator-certified
     namespaces: 
     - openshift-operators
@@ -24,14 +33,36 @@ clusterGroup:
 
   projects:
   - factory
+  - eso
+  - golang-external-secrets
+  - nutanix
 
   applications:
+  - name: golang-external-secrets
+    namespace: golang-external-secrets
+    project: eso
+    path: common/golang-external-secrets
+
   - name: stormshift
     project: factory
     path: charts/factory/manuela-stormshift
     extraValueFiles:
       - /overrides/values-prod-imagedata.yaml
 
+  - name: external-secrets
+    namespace: external-secrets
+    project: golang-external-secrets
+    path: charts/factory/external-secrets
+
+  - name: nutanix-csi
+    namespace: openshift-cluster-csi-drivers
+    project: nutanix
+    path: common/nutanix-csi
+
+  - name: image-registry
+    namespace: openshift-cluster-csi-drivers
+    project: nutanix
+    path: common/image-registry
 #
 #  To have apps in multiple flavors, use namespaces and use helm overrides as appropriate
 #
